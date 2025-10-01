@@ -15,5 +15,8 @@ The aim of this project is to analyze BrightTV’s customer and transaction data
 # Objectives
 To identify the channels that most popular among different customer groups by location and usage behavior.Also to analyze customer engagement levels and identify high-value subscribers.
 
+# Tech Tools Used
+SQL,Databricks,Excel,Miro,Google Looker Studio And Power Point.
+
 # Summary of Report
 It highlights the most profitable customer segments, popular shows and genres, and key behavioral patterns that influence subscriptions. Insights from this analysis will assist the CVM team in designing effective strategies to attract new subscribers, retain existing customers, and ultimately grow BrightTV’s subscription base for this financial year.
