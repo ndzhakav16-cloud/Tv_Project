@@ -1,0 +1,95 @@
+----Cleaned User_Profiles Data
+
+SELECT* FROM Workspace.default.bright_tv_user_profiles;
+
+SELECT 
+  CASE 
+      WHEN gender ='None' THEN 'Unknown' 
+      WHEN gender IS NULL THEN 'Unknown' 
+   ELSE gender
+   END AS gender,
+
+ CASE 
+      WHEN race IN('None','other') THEN 'Unknown' 
+      WHEN race IS NULL THEN 'Unknown' 
+   ELSE race
+   END AS race,
+
+
+ CASE 
+      WHEN Province IN('None') THEN 'Unknown' 
+      WHEN Province IS NULL THEN 'Unknown' 
+   ELSE Province
+   END AS Province
+
+FROM Workspace.default.bright_tv_user_profiles;
+
+2.---- After Cleaning, Creating A new Temp Table for User_Profiles as i Don't to use all the columns.
+
+SELECT 
+    UserID,
+    Age,
+
+  CASE 
+      WHEN gender ='None' THEN 'Unknown' 
+      WHEN gender IS NULL THEN 'Unknown' 
+   ELSE gender
+   END AS gender,
+
+ CASE 
+      WHEN race IN('None','other') THEN 'Unknown' 
+      WHEN race IS NULL THEN 'Unknown' 
+   ELSE race
+   END AS race,
+
+
+ CASE 
+      WHEN Province IN('None') THEN 'Unknown' 
+      WHEN Province IS NULL THEN 'Unknown' 
+   ELSE Province
+   END AS Province
+
+FROM Workspace.default.bright_tv_user_profiles;
+
+ 
+--------------------------------------------------------------------------------------------------
+
+
+
+3.---CREATE OR REPLACE TABLE bright_tv_user_viewership AS(
+
+SELECT bright_tv_user_profiles.UserID ,
+       bright_tv_user_profiles.Gender,
+       bright_tv_user_profiles.Race,
+       bright_tv_user_profiles.Age,
+       bright_tv_user_profiles.Province,
+       bright_tv_viewership.Channel2,
+       bright_tv_viewership.RecordDate2, 
+       bright_tv_viewership.Duration2
+
+
+ 
+FROM Workspace.default.bright_tv_user_profiles 
+JOIN Workspace.default.bright_tv_viewership 
+ ON bright_tv_user_profiles.userID=bright_tv_viewership.UserID);      
+
+ SELECT
+       CHANNEL2,
+       AGE,
+       GENDER,
+       PROVINCE,
+       RACE,
+       COUNT(DISTINCT USERID) AS total_viewers,
+       AVG(DURATION2) AS avg_duration_minutes,
+       COUNT(CHANNEL2) AS total_views_PerChannel,
+       AVG(DURATION2) AS avg_duration ,
+       COUNT( RACE) AS Viewers_Per_Race
+
+FROM bright_tv_user_viewership
+GROUP BY ALL
+ORDER BY total_viewers DESC;
+
+
+
+ 
+
