@@ -24,8 +24,15 @@ The aim of this project is to analyze BrightTV’s customer and transaction data
 * Analyze overall customer engagement levels and identify high-value subscribers who contribute most to viewership and revenue.
 * Highlight opportunities for targeted marketing, personalized recommendations, and enhanced retention strategies.
 
-# Tech Tools Used
-SQL,Databricks,Excel,Miro,Google Looker Studio And Power Point.
+|  Tool                     | Purpose                                       |
+| ------------------------  | --------------------------------------------- |
+| SQL                       | Data extraction, querying, and transformation |
+| Excel                     | Data cleaning and exploratory data analysis   |
+| Google Looker Studio      | Interactive dashboard creation                |
+| Miro                      | Process mapping and planning                  |
+| Gantt Chart               | Project Scheduling and planning               |
+| PowerPoint                | Presenting insights and recommendations       |
+
 
 # Summary of Report
 
