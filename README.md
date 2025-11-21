@@ -24,6 +24,8 @@ The aim of this project is to analyze BrightTV’s customer and transaction data
 * Analyze overall customer engagement levels and identify high-value subscribers who contribute most to viewership and revenue.
 * Highlight opportunities for targeted marketing, personalized recommendations, and enhanced retention strategies.
 
+# Tech Tools Used
+
 |  Tool                     | Purpose                                       |
 | ------------------------  | --------------------------------------------- |
 | SQL                       | Data extraction, querying, and transformation |
