@@ -34,7 +34,7 @@ The aim of this project is to analyze BrightTV’s customer and transaction data
 | Miro                      | Process mapping and planning                  |
 | Gantt Chart               | Project Scheduling and planning               |
 | PowerPoint                | Presenting insights and recommendations       |
-
+| GitHub                    |  Version control and portfolio documentation  |
 
 # Summary of Report
 
